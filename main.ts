@@ -1,8 +1,8 @@
-let voltage = 0
-let test = 0
 // This block sets the pin 0 to ON (1) to give power. To turn it off, set it to 0.
 // 
 // Note that the variables "test" and "voltage" had to be created in the Variables tab before using these blocks.
+let voltage = 0
+let test = 0
 pins.digitalWritePin(DigitalPin.P0, 1)
 // This block sets the value of the variable "test" to the value of the "voltage" read by the wire in pin 1. (From 0 to 1023, where 0 is no voltage to 1023, max voltage (around 3 V)).
 // 

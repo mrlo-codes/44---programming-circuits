@@ -1,8 +1,8 @@
-voltage = 0
-test = 0
 # This block sets the pin 0 to ON (1) to give power. To turn it off, set it to 0.
 # 
 # Note that the variables "test" and "voltage" had to be created in the Variables tab before using these blocks.
+voltage = 0
+test = 0
 pins.digital_write_pin(DigitalPin.P0, 1)
 # This block sets the value of the variable "test" to the value of the "voltage" read by the wire in pin 1. (From 0 to 1023, where 0 is no voltage to 1023, max voltage (around 3 V)).
 # 
@@ -14,7 +14,7 @@ def on_forever():
     voltage = (1024 - test) / 1024 * 3.3
     print("Analog read in: " + ("" + ("" + ("" + str(test)))) + " Voltage: " + ("" + ("" + ("" + str(voltage)))) + "V")
     if voltage >= 3:
-        basic.show_string("L")
+        basic.show_string("H")
     elif voltage >= 1:
         basic.show_string("L")
     else:
